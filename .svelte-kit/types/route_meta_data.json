@@ -1,0 +1,8 @@
+{
+	"/": [
+		"src/routes/+page.server.ts"
+	],
+	"/api/alerts": [
+		"src/routes/api/alerts/+server.ts"
+	]
+}
