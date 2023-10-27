@@ -55,6 +55,7 @@
 </script>
 
 <div class="w-full max-w-lg mx-auto pt-[89px]">
+{#if alerts}
 	<div>
 		{#each alerts as alert (alert.id) }
 			<AlertCard id={alert.id} level={alert.level} name={alert.name} description={alert.description} archived={alert.archived} timestamp={new Date(alert.createdAt).toLocaleString('en-MY', {
@@ -69,6 +70,13 @@
 	
 
 	</div>
+
+{:else}
+	<div class="flex items-center justify-center text-gray-500">	
+		No alerts today
+	</div>
+{/if}
+
 </div>
 
 <dialog id="archive_confirmation_modal" class="modal">
