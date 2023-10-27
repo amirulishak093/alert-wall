@@ -73,7 +73,7 @@
 
 {:else}
 	<div class="flex items-center justify-center text-gray-500 pt-8">	
-		No alerts today
+		No alerts for today
 	</div>
 {/if}
 
