@@ -3,14 +3,25 @@ import type { Actions } from "@sveltejs/kit";
 
 
 export async function load() {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0); 
-  
-    const tomorrow = new Date(today); 
-    tomorrow.setDate(tomorrow.getDate() + 1); 
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
 
-    const alerts = await getAlerts({orderBy: {createdAt: 'desc'}})
-    return {alerts}
+  const tomorrow = new Date(now);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
+  const alerts = await prisma.alert.findMany({
+    where: {
+      createdAt: {
+        gte: now,
+        lt: tomorrow,
+      },
+    },
+    orderBy: {
+      createdAt: 'desc',
+    },
+  });
+
+  return { alerts };
 }
 
 export const actions: Actions = {
