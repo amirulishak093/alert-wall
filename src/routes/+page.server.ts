@@ -4,21 +4,8 @@ import type { Actions } from "@sveltejs/kit";
 
 export async function load() {
 
-const todayUTC = new Date();
-  
-const startOfTodayUTC = new Date(todayUTC);
-startOfTodayUTC.setUTCHours(0, 0, 0, 0);
-
-const endOfTodayUTC = new Date(todayUTC);
-endOfTodayUTC.setUTCHours(23, 59, 59, 999);
-
   const alerts = await prisma.alert.findMany({
-    where: {
-      createdAt: {
-      gte: startOfToday,
-      lte: endOfToday,
-      },
-    },
+
     orderBy: {
       createdAt: 'desc',
     },
