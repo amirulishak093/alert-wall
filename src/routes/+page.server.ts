@@ -4,11 +4,15 @@ import type { Actions } from "@sveltejs/kit";
 
 export async function load() {
 const today = new Date();
+
 const startOfToday = new Date(today);
 startOfToday.setHours(0, 0, 0, 0);
 
 const endOfToday = new Date(today);
 endOfToday.setHours(23, 59, 59, 999);
+
+const startOfTodayISO = startOfToday.toISOString();
+const endOfTodayISO = endOfToday.toISOString();
 
   const alerts = await prisma.alert.findMany({
     where: {
