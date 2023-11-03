@@ -9,7 +9,7 @@ export async function load() {
     const tomorrow = new Date(today); 
     tomorrow.setDate(tomorrow.getDate() + 1); 
 
-    const alerts = await getAlerts({orderBy: {createdAt: 'desc'}, where: {createdAt: {gte: today, lt: tomorrow}}})
+    const alerts = await getAlerts({orderBy: {createdAt: 'desc'}})
     return {alerts}
 }
 
