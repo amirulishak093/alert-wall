@@ -8,7 +8,7 @@ export async function load() {
   const tomorrow = new Date(today);
   tomorrow.setDate(today.getDate() + 1); 
 
-  const alerts = await prisma.alert.findMany({
+  const alerts = await getAlerts({
     where: {
       createdAt: {
         gte: today, 
