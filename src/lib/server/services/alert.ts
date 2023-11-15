@@ -1,37 +1,22 @@
 import type { Prisma } from '@prisma/client';
 import { db } from '../db';
 
-// Create a new alert or update an existing alert with the same originID.
+// Create a new alert.
 // Parameters:
-// - data: The data for creating or updating an alert.
+// - data: The data for creating a new alert.
 export async function createAlert({ data }: Prisma.AlertCreateArgs) {
     try {
-        // Check if an alert with the specified originID already exists.
-        const existingAlert = await db.alert.findUnique({
-            where: { originID: data.originID },
-        });
+        // Create a new alert using the provided data.
+        const newAlert = await db.alert.create({
+            data
+        })
 
-        if (existingAlert) {
-            // If it exists, update the existing alert.
-            const updatedAlert = await db.alert.update({
-                where: { id: existingAlert.id },
-                data,
-            });
+        // Return the newly created alert.
+        return newAlert
 
-            // Return the updated alert.
-            return updatedAlert;
-        } else {
-            // If it doesn't exist, create a new alert.
-            const newAlert = await db.alert.create({
-                data,
-            });
-
-            // Return the newly created alert.
-            return newAlert;
-        }
     } catch (error) {
-        console.error('Error creating or updating alert', error);
-        throw new Error('Failed to create or update alert');
+        console.error('Error creating alert', error)
+        throw new Error('Failed to create alert')
     }
 }
 
