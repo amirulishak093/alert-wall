@@ -10,6 +10,8 @@ export async function createAlert({ data }: Prisma.AlertCreateArgs) {
             where: { originID: data.originID },
         });
 
+	console.log(existingAlert);
+
         if (existingAlert) {
             // If it exists, update the existing alert.
             const updatedAlert = await db.alert.update({
