@@ -12,6 +12,7 @@ datasource db {
 
 model Alert {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  originID    String?
   name        String
   level       Int      @default(0)
   description String
