@@ -22,15 +22,16 @@ export async function createAlert({ data }: Prisma.AlertCreateArgs) {
                 // Return the updated alert.
                 return updatedAlert;
             }
-        } else {
-            // If originID is not provided, create a new alert with the provided data.
-            const newAlert = await db.alert.create({
-                data: { ...data, createdAt: new Date() },
-            });
+        } 
+        
+        // If originID is not provided, create a new alert with the provided data.
+        const newAlert = await db.alert.create({
+            data,
+        });
 
-            // Return the newly created alert.
-            return newAlert;
-        }
+        // Return the newly created alert.
+        return newAlert;
+      
     } catch (error) {
         console.error('Error creating or updating alert', error);
         throw new Error('Failed to create or update alert');
