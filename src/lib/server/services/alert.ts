@@ -6,6 +6,9 @@ import { db } from '../db';
 // - data: The data for creating a new alert.
 export async function createAlert({ data }: Prisma.AlertCreateArgs) {
     try {
+
+        console.log(data.originID)
+
         const existingAlert = await db.alert.findFirst({
             where: { originID: data.originID },
         });
