@@ -5,9 +5,9 @@ import type { Prisma } from '@prisma/client';
 
 export async function POST(event: RequestEvent) {
 	try {
-		const { name, level, description} = await event.request.json();
+		const { name, level, description, originID} = await event.request.json();
 
-		await createAlert({ data: { name, level, description, } });
+		await createAlert({ data: { name, level, description, originID } });
 
 		return json({ success: true });
 	} catch (error) {
