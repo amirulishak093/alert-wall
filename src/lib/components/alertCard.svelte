@@ -12,21 +12,25 @@
 </script>
 
 <div class="flex items-center gap-x-3 border-b hover:bg-base-200 px-4">
-	{#if level === 0}
-		<Icon src={InformationCircle} class='text-info' size="28" />
-	{:else if level === 1}
-		<Icon src={ExclamationTriangle} class="text-warning" size="28" />
-	{:else if level === 2}
-		<Icon src={XCircle} class="text-error" size="28" />
-	{/if}
+
 
 	<div class="py-4 w-full">
-		{#if level === 0}
-			<span class="text-info">INFO</span>
-		{:else if level === 1}
-			<span class="text-warning">WARNING</span>
-		{:else if level === 2}
-			<span class="text-error">CRITICAL</span>
+		<div class="flex gap-2">
+			{#if level === 0}
+				<Icon src={InformationCircle} class='text-info' size="28" />
+			{:else if level === 1}
+				<Icon src={ExclamationTriangle} class="text-warning" size="28" />
+			{:else if level === 2}
+				<Icon src={XCircle} class="text-error" size="28" />
+			{/if}
+
+			{#if level === 0}
+				<span class="text-info">INFO</span>
+			{:else if level === 1}
+				<span class="text-warning">WARNING</span>
+			{:else if level === 2}
+				<span class="text-error">CRITICAL</span>
+		</div>
 		{/if}
 		<h2 class="font-semibold text-base">{name}</h2>
 		<p>{description}</p>
