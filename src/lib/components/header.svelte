@@ -13,7 +13,7 @@
 	<div class="max-w-lg mx-auto px-4">
 		<div class="flex items-center justify-between py-2">
 			<div class="flex items-center gap-2">
-				<h1 class="font-semibold text-xl">Alerts</h1>
+				<h1 class="font-semibold text-lg">Alerts</h1>
 				<div class="flex items-center justify-center rounded-full bg-red-500 w-6 h-6 text-white">
 					{$totalItems}
 				</div>
