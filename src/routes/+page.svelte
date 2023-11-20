@@ -54,7 +54,7 @@
 	});
 </script>
 
-<div class="w-full max-w-lg mx-auto pt-[89px]">
+<div class="w-full max-w-xl mx-auto pt-[89px]">
 {#if alerts.length > 0}
 	<div>
 		{#each alerts as alert (alert.id) }
