@@ -33,9 +33,9 @@
 			{/if}
 		</div>
 		
-		<h2 class="font-semibold text-sm">{name}</h2>
+		<span class="font-semibold text-sm">{name}</span>
 		<p class="text-sm">{description}</p>
-		<span class="text-xs text-[#82878E]">{timestamp}</span>
+		<span class="block ml-auto text-xs text-[#82878E]">{timestamp}</span>
 	</div>
 
 	{#if !archived}
