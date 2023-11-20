@@ -30,8 +30,9 @@
 				<span class="text-warning">WARNING</span>
 			{:else if level === 2}
 				<span class="text-error">CRITICAL</span>
+			{/if}
 		</div>
-		{/if}
+		
 		<h2 class="font-semibold text-base">{name}</h2>
 		<p>{description}</p>
 		<span class="text-xs text-[#82878E]">{timestamp}</span>
