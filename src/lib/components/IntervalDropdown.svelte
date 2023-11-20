@@ -32,37 +32,37 @@
 
 <div class="relative z-[1000]" bind:this={dropdown}>
 	<button
-		class="flex bg-white gap-x-1 items-center px-4 h-10 border-b rounded-lg border-transparent hover:bg-[#F8F8F9] hover:shadow-sm hover:border-[#F8F8F9] transition-all"
+		class="flex bg-white gap-x-1 items-center px-4 h-10 border-b rounded-lg border-transparent hover:bg-[#F8F8F9] hover:shadow-sm hover:border-[#F8F8F9] transition-all text-sm"
 		on:click={toggleDropdown}
 		>{$refreshInterval}
 		<Icon class="w-3" src={ChevronDown} />
 	</button>
 
 	{#if isOpen}
-		<div class="absolute right-0 py-2 bg-white border rounded-lg shadow-md text-sm">
+		<div class="absolute right-0 py-2 bg-white border rounded-lg shadow-md">
 			<button
 				on:click={() => onSelect('5s')}
-				class="flex items-center px-4 h-8 text-gray-800 hover:bg-[#F8F8F9] appearance-none w-full"
+				class="flex items-center px-4 h-8 text-gray-800 hover:bg-[#F8F8F9] appearance-none w-full text-sm"
 				>5s</button
 			>
 			<button
 				on:click={() => onSelect('10s')}
-				class="flex items-center px-4 h-8 text-gray-800 hover:bg-[#F8F8F9] appearance-none w-full"
+				class="flex items-center px-4 h-8 text-gray-800 hover:bg-[#F8F8F9] appearance-none w-full text-sm"
 				>10s</button
 			>
 			<button
 				on:click={() => onSelect('30s')}
-				class="flex items-center px-4 h-8 text-gray-800 hover:bg-[#F8F8F9] appearance-none w-full"
+				class="flex items-center px-4 h-8 text-gray-800 hover:bg-[#F8F8F9] appearance-none w-full text-sm"
 				>30s</button
 			>
 			<button
 				on:click={() => onSelect('1m')}
-				class="flex items-center px-4 h-8 text-gray-800 hover:bg-[#F8F8F9] appearance-none w-full"
+				class="flex items-center px-4 h-8 text-gray-800 hover:bg-[#F8F8F9] appearance-none w-full text-sm"
 				>1m</button
 			>
 			<button
 				on:click={() => onSelect('5m')}
-				class="flex items-center px-4 h-8 text-gray-800 hover:bg-[#F8F8F9] appearance-none w-full"
+				class="flex items-center px-4 h-8 text-gray-800 hover:bg-[#F8F8F9] appearance-none w-full text-sm"
 				>5m</button
 			>
 		</div>
