@@ -16,7 +16,7 @@
 
 	<div class="py-4 w-full">
 		<div class="flex items-center">
-			<div class="flex items-center gap-1">
+			<div class="flex items-center justify-between gap-1">
 				{#if level === 0}
 					<Icon src={InformationCircle} class='text-info' size="16" />
 				{:else if level === 1}
@@ -33,7 +33,7 @@
 					<span class="text-error text-sm">CRITICAL</span>
 				{/if}
 			</div>
-			<span class="block text-end text-xs text-[#82878E]">{timestamp}</span>
+			<div class="text-xs text-[#82878E]">{timestamp}</div>
 		</div>
 
 		
