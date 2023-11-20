@@ -38,7 +38,7 @@
 
 		
 		<span class="font-semibold text-sm">{name}</span>
-		<p class="text-sm">{description}</p>
+		<p class="text-sm pt-4">{description}</p>
 		
 	</div>
 
