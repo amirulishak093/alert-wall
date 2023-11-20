@@ -10,7 +10,7 @@
 </script>
 
 <header class="w-full border-b shadow-sm fixed bg-white z-20">
-	<div class="max-w-lg mx-auto px-4">
+	<div class="max-w-xl mx-auto px-4">
 		<div class="flex items-center justify-between py-2">
 			<div class="flex items-center gap-2">
 				<h1 class="font-semibold text-lg">Alerts</h1>
