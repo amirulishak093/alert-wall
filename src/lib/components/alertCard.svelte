@@ -15,27 +15,31 @@
 
 
 	<div class="py-4 w-full">
-		<div class="flex items-center gap-1">
-			{#if level === 0}
-				<Icon src={InformationCircle} class='text-info' size="16" />
-			{:else if level === 1}
-				<Icon src={ExclamationTriangle} class="text-warning" size="16" />
-			{:else if level === 2}
-				<Icon src={XCircle} class="text-error" size="16" />
-			{/if}
-
-			{#if level === 0}
-				<span class="text-info text-sm">INFO</span>
-			{:else if level === 1}
-				<span class="text-warning text-sm">WARNING</span>
-			{:else if level === 2}
-				<span class="text-error text-sm">CRITICAL</span>
-			{/if}
+		<div class="flex items-center">
+			<div class="flex items-center gap-1">
+				{#if level === 0}
+					<Icon src={InformationCircle} class='text-info' size="16" />
+				{:else if level === 1}
+					<Icon src={ExclamationTriangle} class="text-warning" size="16" />
+				{:else if level === 2}
+					<Icon src={XCircle} class="text-error" size="16" />
+				{/if}
+	
+				{#if level === 0}
+					<span class="text-info text-sm">INFO</span>
+				{:else if level === 1}
+					<span class="text-warning text-sm">WARNING</span>
+				{:else if level === 2}
+					<span class="text-error text-sm">CRITICAL</span>
+				{/if}
+			</div>
+			<span class="block text-end text-xs text-[#82878E]">{timestamp}</span>
 		</div>
+
 		
 		<span class="font-semibold text-sm">{name}</span>
 		<p class="text-sm">{description}</p>
-		<span class="block text-end text-xs text-[#82878E]">{timestamp}</span>
+		
 	</div>
 
 	{#if !archived}
