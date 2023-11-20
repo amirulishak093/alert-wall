@@ -16,7 +16,7 @@
 
 	<div class="py-4 w-full">
 		<div class="flex items-center">
-			<div class="flex items-center justify-between gap-1">
+			<div class="w-full flex items-center justify-between gap-1">
 				{#if level === 0}
 					<Icon src={InformationCircle} class='text-info' size="16" />
 				{:else if level === 1}
