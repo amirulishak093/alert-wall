@@ -15,7 +15,7 @@
 
 
 	<div class="py-4 w-full">
-		<div class="flex gap-1">
+		<div class="flex items-center gap-1">
 			{#if level === 0}
 				<Icon src={InformationCircle} class='text-info' size="16" />
 			{:else if level === 1}
@@ -35,7 +35,7 @@
 		
 		<span class="font-semibold text-sm">{name}</span>
 		<p class="text-sm">{description}</p>
-		<span class="block ml-auto text-xs text-[#82878E]">{timestamp}</span>
+		<span class="block text-end ml-auto text-xs text-[#82878E]">{timestamp}</span>
 	</div>
 
 	{#if !archived}
