@@ -15,13 +15,13 @@
 
 
 	<div class="py-4 w-full">
-		<div class="flex gap-2">
+		<div class="flex gap-1">
 			{#if level === 0}
-				<Icon src={InformationCircle} class='text-info' size="28" />
+				<Icon src={InformationCircle} class='text-info' size="26" />
 			{:else if level === 1}
-				<Icon src={ExclamationTriangle} class="text-warning" size="28" />
+				<Icon src={ExclamationTriangle} class="text-warning" size="26" />
 			{:else if level === 2}
-				<Icon src={XCircle} class="text-error" size="28" />
+				<Icon src={XCircle} class="text-error" size="26" />
 			{/if}
 
 			{#if level === 0}
