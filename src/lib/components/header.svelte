@@ -14,7 +14,7 @@
 		<div class="flex items-center justify-between py-2">
 			<div class="flex items-center gap-2">
 				<h1 class="font-semibold text-lg">Alerts</h1>
-				<div class="flex items-center justify-center rounded-full bg-red-500 w-4 h-4 text-white">
+				<div class="flex items-center justify-center rounded-full bg-red-500 w-5 h-5 text-white">
 					{$totalItems}
 				</div>
 			</div>
