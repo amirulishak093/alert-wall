@@ -39,7 +39,7 @@
 	</button>
 
 	{#if isOpen}
-		<div class="absolute right-0 py-2 bg-white border rounded-lg shadow-md">
+		<div class="absolute right-0 py-2 bg-white border rounded-lg shadow-md text-sm">
 			<button
 				on:click={() => onSelect('5s')}
 				class="flex items-center px-4 h-8 text-gray-800 hover:bg-[#F8F8F9] appearance-none w-full"
