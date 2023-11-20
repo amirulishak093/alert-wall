@@ -35,7 +35,7 @@
 		
 		<span class="font-semibold text-sm">{name}</span>
 		<p class="text-sm">{description}</p>
-		<span class="block text-end ml-auto text-xs text-[#82878E]">{timestamp}</span>
+		<span class="block text-end text-xs text-[#82878E]">{timestamp}</span>
 	</div>
 
 	{#if !archived}
