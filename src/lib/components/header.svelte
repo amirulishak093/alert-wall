@@ -39,7 +39,7 @@
 					await invalidateAll();
 				};
 			}}>
-			<button class="link link-hover text-[#007FFF]">Archive All</button>
+			<button class="link link-hover text-[#007FFF] text-sm">Archive All</button>
 				
 			</form>
 
