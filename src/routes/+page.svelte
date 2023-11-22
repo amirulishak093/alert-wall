@@ -42,11 +42,11 @@
 
 	async function refreshData() {
 		await invalidateAll();
-		$totalItems = data.alerts.length
+		$totalItems = data.alerts.filter(alert => alert.archived).length
 	}
 
 	onMount(() => {
-		$totalItems = data.alerts.length
+		$totalItems = data.alerts.filter(alert => alert.archived).length
 	})
 
 	onDestroy(() => {
