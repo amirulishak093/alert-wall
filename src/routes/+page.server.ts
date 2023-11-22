@@ -13,6 +13,8 @@ export async function load() {
   const endOfDayMYT = new Date(startOfDayMYT);
   endOfDayMYT.setDate(startOfDayMYT.getDate() + 1);
 
+  startOfDayMYT.setDate(startOfDayMYT.getDate() -7);
+
   const startOfDayUTC = new Date(startOfDayMYT.getTime() - (malaysiaTimezoneOffset * 60 * 1000));
   const endOfDayUTC = new Date(endOfDayMYT.getTime() - (malaysiaTimezoneOffset * 60 * 1000));
 
