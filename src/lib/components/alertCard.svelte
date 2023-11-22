@@ -13,7 +13,7 @@
 
 </script>
 
-<div on:click={() => {readMore = !readMore}} class="flex items-center gap-x-3 border-b hover:bg-base-200 px-4">
+<div on:click={() => {readMore = !readMore}} class="flex items-center gap-x-3 border-b hover:bg-base-200 px-4 cursor-pointer">
 
 
 	<div class="py-4 w-full">
@@ -43,7 +43,7 @@
 		{#if !readMore}
 			<p class="text-sm pt-1">{trimAndEllipsis(description)}></p>
 		{:else}
-			<p class="text-sm pt-1">{description}></p>
+			<p class="text-sm pt-1">{description}</p>
 		{/if}
 
 		
