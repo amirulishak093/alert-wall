@@ -41,9 +41,9 @@
 		
 		<span class="font-semibold text-sm">{name}</span>
 		{#if !readMore}
-			<div class="flex"><p class="text-sm pt-1">{trimAndEllipsis(description)}</p><a on:click={() => {readMore = !readMore}} class="text-sm link link-primary">Read More</a></div>
+			<div class="flex items-center"><p class="text-sm pt-1">{trimAndEllipsis(description)}</p><a on:click={() => {readMore = !readMore}} class="ml-1 text-sm link link-primary">Read More</a></div>
 		{:else}
-			<div class="flex"><p class="text-sm pt-1">{description}</p><a on:click={() => {readMore = !readMore}} class="text-sm link link-primary">Read Less</a></div>
+			<div class="flex items-center"><p class="text-sm pt-1">{description}</p><a on:click={() => {readMore = !readMore}} class="ml-1 text-sm link link-primary">Read Less</a></div>
 		{/if}
 
 		
