@@ -13,7 +13,7 @@
 
 </script>
 
-<div class="flex items-center gap-x-3 border-b hover:bg-base-200 px-4">
+<div on:click={() => {readMore = !readMore}} class="flex items-center gap-x-3 border-b hover:bg-base-200 px-4">
 
 
 	<div class="py-4 w-full">
@@ -41,9 +41,9 @@
 		
 		<span class="font-semibold text-sm">{name}</span>
 		{#if !readMore}
-			<p class="text-sm pt-1">{trimAndEllipsis(description)} <span on:click={() => {readMore = !readMore}} class="text-sm link link-primary">Read More</span></p>
+			<p class="text-sm pt-1">{trimAndEllipsis(description)}></p>
 		{:else}
-			<p class="text-sm pt-1">{description} <span on:click={() => {readMore = !readMore}} class="text-sm link link-primary">Read Less</span></p>
+			<p class="text-sm pt-1">{description}></p>
 		{/if}
 
 		
