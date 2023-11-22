@@ -1,5 +1,6 @@
 <script>
 	import { selectedId } from '$lib/store'
+	import  { trimAndEllipsis } from '$lib/utils'
 	import { XCircle, InformationCircle, ExclamationTriangle, ArchiveBox, ArchiveBoxArrowDown, Icon } from 'svelte-hero-icons';
 
 	export let id = '';
@@ -38,7 +39,7 @@
 
 		
 		<span class="font-semibold text-sm">{name}</span>
-		<p class="text-sm pt-1">{description}</p>
+		<p class="text-sm pt-1">{trimAndEllipsis(description)}</p>
 		
 	</div>
 
