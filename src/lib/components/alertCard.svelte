@@ -9,6 +9,7 @@
 	export let name = ''
 	export let description = '';
 	export let timestamp = '';
+	export readMore = false;
 
 </script>
 
@@ -39,7 +40,13 @@
 
 		
 		<span class="font-semibold text-sm">{name}</span>
-		<p class="text-sm pt-1">{trimAndEllipsis(description)}</p>
+		{#if !readMore}
+			<p class="text-sm pt-1">{trimAndEllipsis(description)}</p><a on:click={() => {readMore = !readMore}} class="link link-primary">Read More</a>
+		{:else}
+			<p class="text-sm pt-1">{description}</p>
+		{/if}
+
+		
 		
 	</div>
 
