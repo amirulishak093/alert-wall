@@ -9,7 +9,7 @@
 	export let name = ''
 	export let description = '';
 	export let timestamp = '';
-	export readMore = false;
+	export let readMore = false;
 
 </script>
 
