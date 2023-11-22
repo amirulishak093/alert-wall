@@ -41,7 +41,7 @@
 		
 		<span class="font-semibold text-sm">{name}</span>
 		{#if !readMore}
-			<p class="text-sm pt-1">{trimAndEllipsis(description)}></p>
+			<p class="text-sm pt-1">{trimAndEllipsis(description)}</p>
 		{:else}
 			<p class="text-sm pt-1">{description}</p>
 		{/if}
