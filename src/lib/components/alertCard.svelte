@@ -11,6 +11,12 @@
 	export let timestamp = '';
 	export let readMore = false;
 
+	  function isNew(timestamp) {
+	    const { start, end } = getDateRange(1);
+	    const itemTime = new Date(timestamp).getTime();
+	    return itemTime >= start.getTime() && itemTime <= end.getTime();
+	  }
+
 </script>
 
 <div on:click={() => {readMore = !readMore}} class="flex items-center gap-x-3 border-b hover:bg-base-200 px-4 cursor-pointer">
@@ -35,7 +41,9 @@
 					<span class="text-error text-sm">CRITICAL</span>
 				{/if}
 
-				<div class="ml-1 badge badge-sm">NEW</div>
+			        {#if isNew(timestamp)}
+			          <div class="ml-1 badge badge-sm">NEW</div>
+			        {/if}
 			</div>
 			<div class="text-xs text-[#82878E]">{timestamp}</div>
 		</div>
