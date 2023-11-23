@@ -34,6 +34,8 @@
 				{:else if level === 2}
 					<span class="text-error text-sm">CRITICAL</span>
 				{/if}
+
+				<span class="badge badge-xs">NEW</span>
 			</div>
 			<div class="text-xs text-[#82878E]">{timestamp}</div>
 		</div>
