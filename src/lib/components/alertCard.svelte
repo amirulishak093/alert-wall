@@ -24,7 +24,7 @@
 
 	  function isNew(date) {
 	    const { start, end } = getDateRange(0);
-	    const itemTime = new Date(getMalaysiaTime()).getTime();
+	    const itemTime = getMalaysiaTime().getTime();
 	    return itemTime >= start.getTime() && itemTime < end.getTime();
 	  }
 
