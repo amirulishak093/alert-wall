@@ -1,6 +1,6 @@
 <script>
 	import { selectedId } from '$lib/store'
-	import  { trimAndEllipsis, getDateRange } from '$lib/utils'
+	import  { trimAndEllipsis, getDateRange, getMalaysiaTime } from '$lib/utils'
 	import { XCircle, InformationCircle, ExclamationTriangle, ArchiveBox, ArchiveBoxArrowDown, Icon } from 'svelte-hero-icons';
 
 	export let id = '';
@@ -24,7 +24,7 @@
 
 	  function isNew(date) {
 	    const { start, end } = getDateRange(0);
-	    const itemTime = new Date(date).getTime();
+	    const itemTime = new Date(getMalaysiaTime()).getTime();
 	    return itemTime >= start.getTime() && itemTime < end.getTime();
 	  }
 
