@@ -24,7 +24,7 @@
 
 	  function isNew(date) {
 	    const { start, end } = getDateRange(0);
-	    const itemTime = convertToMalaysiaTime(new Date(date)).getTime();
+	    const itemTime = new Date(date).getTime();
 	    return itemTime >= start.getTime() && itemTime < end.getTime();
 	  }
 
