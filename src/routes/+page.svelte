@@ -58,14 +58,7 @@
 {#if alerts.length > 0}
 	<div>
 		{#each alerts as alert (alert.id) }
-			<AlertCard id={alert.id} level={alert.level} name={alert.name} description={alert.description} archived={alert.archived} timestamp={new Date(alert.createdAt).toLocaleString('en-MY', {
-				year: 'numeric',
-				month: '2-digit',
-				day: '2-digit',
-				hour: '2-digit',
-				minute: '2-digit',
-				second: '2-digit',
-			  })} />
+			<AlertCard id={alert.id} level={alert.level} name={alert.name} description={alert.description} archived={alert.archived} createdAt={alert.creatdAt} />
 		{/each}
 	
 
