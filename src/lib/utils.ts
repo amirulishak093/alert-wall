@@ -6,14 +6,13 @@ export function trimAndEllipsis(text: string) {
     }
   }
 
-export function getMalaysiaTime(): Date {
+export function convertToMalaysiaTime(date: Date): Date {
   const malaysiaTimezoneOffset = 8 * 60; // UTC+8 in minutes
-  const currentUTC = new Date();
-  return new Date(currentUTC.getTime() + (malaysiaTimezoneOffset * 60 * 1000));
+  return new Date(date.getTime() + (malaysiaTimezoneOffset * 60 * 1000));
 }
 
 export function getDateRange(numOfDays: number): { start: Date, end: Date } {
-  const malaysiaTime = getMalaysiaTime();
+  const malaysiaTime = convertToMalaysiaTime(new Date());
   
   const endOfDayMYT = new Date(malaysiaTime);
   endOfDayMYT.setHours(23, 59, 59, 999);
@@ -22,9 +21,8 @@ export function getDateRange(numOfDays: number): { start: Date, end: Date } {
   startOfDayMYT.setDate(endOfDayMYT.getDate() - numOfDays);
   startOfDayMYT.setHours(0, 0, 0, 0);
   
-  const malaysiaTimezoneOffset = 8 * 60; // UTC+8 in minutes
-  const startOfDayUTC = new Date(startOfDayMYT.getTime() - (malaysiaTimezoneOffset * 60 * 1000));
-  const endOfDayUTC = new Date(endOfDayMYT.getTime() - (malaysiaTimezoneOffset * 60 * 1000));
+  const startOfDayUTC = convertToMalaysiaTime(startOfDayMYT);
+  const endOfDayUTC = convertToMalaysiaTime(endOfDayMYT);
   
   return {
     start: startOfDayUTC,
