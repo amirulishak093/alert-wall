@@ -13,8 +13,8 @@
 
 	  function isNew(timestamp) {
 	    const { start, end } = getDateRange(1);
-	    const itemTime = new Date(timestamp).getTime();
-	    return itemTime >= start.getTime() && itemTime <= end.getTime();
+	    const itemTime = new Date().getTime();
+	    return itemTime <= new Date().getTime() + 1;
 	  }
 
 </script>
