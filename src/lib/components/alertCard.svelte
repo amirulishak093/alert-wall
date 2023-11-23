@@ -23,9 +23,8 @@
 	}
 
 	  function isNew(date) {
-	    const { start, end } = getDateRange(1);
+	    const { start, end } = getDateRange(0);
 	    const itemTime = new Date(date).getTime();
-	    console.log(new Date(date));
 	    return itemTime >= start.getTime() && itemTime < end.getTime();
 	  }
 
