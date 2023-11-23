@@ -35,7 +35,7 @@
 					<span class="text-error text-sm">CRITICAL</span>
 				{/if}
 
-				<div class="ml-1 badge badge-outline badge-sm">NEW</div>
+				<div class="ml-1 badge badge-outline badge-xs">NEW</div>
 			</div>
 			<div class="text-xs text-[#82878E]">{timestamp}</div>
 		</div>
