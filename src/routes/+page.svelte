@@ -58,7 +58,7 @@
 {#if alerts.length > 0}
 	<div>
 		{#each alerts as alert (alert.id) }
-			<AlertCard id={alert.id} level={alert.level} name={alert.name} description={alert.description} archived={alert.archived} createdAt={alert.creatdAt} />
+			<AlertCard id={alert.id} level={alert.level} name={alert.name} description={alert.description} archived={alert.archived} createdAt={alert.createdAt} />
 		{/each}
 	
 
