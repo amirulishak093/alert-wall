@@ -14,7 +14,7 @@
 	  function isNew(timestamp) {
 	    const { start, end } = getDateRange(1);
 	    const itemTime = new Date(timestamp).getTime();
-	    console.log(timestamp);
+	    console.log(new Date(timestamp));
 	    return itemTime >= start.getTime() && itemTime < end.getTime();
 	  }
 
