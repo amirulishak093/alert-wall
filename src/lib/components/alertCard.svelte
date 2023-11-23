@@ -8,13 +8,24 @@
 	export let archived = false;
 	export let name = ''
 	export let description = '';
-	export let timestamp = '';
+	export let createdAt;
 	export let readMore = false;
 
-	  function isNew(timestamp) {
+	function getTimestamp(date) {
+		return new Date(date).toLocaleString('en-MY', {
+				year: 'numeric',
+				month: '2-digit',
+				day: '2-digit',
+				hour: '2-digit',
+				minute: '2-digit',
+				second: '2-digit',
+			  });
+	}
+
+	  function isNew(date) {
 	    const { start, end } = getDateRange(1);
-	    const itemTime = new Date(timestamp).getTime();
-	    console.log(new Date(timestamp));
+	    const itemTime = new Date(date).getTime();
+	    console.log(new Date(date));
 	    return itemTime >= start.getTime() && itemTime < end.getTime();
 	  }
 
@@ -42,11 +53,11 @@
 					<span class="text-error text-sm">CRITICAL</span>
 				{/if}
 
-			        {#if isNew(timestamp)}
+			        {#if isNew(createdAt)}
 			          <div class="ml-1 badge badge-sm">NEW</div>
 			        {/if}
 			</div>
-			<div class="text-xs text-[#82878E]">{timestamp}</div>
+			<div class="text-xs text-[#82878E]">{getTimestamp(createdAt)}</div>
 		</div>
 
 		
