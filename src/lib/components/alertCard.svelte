@@ -1,6 +1,6 @@
 <script>
 	import { selectedId } from '$lib/store'
-	import  { trimAndEllipsis, getDateRange, getMalaysiaTime } from '$lib/utils'
+	import  { trimAndEllipsis, getDateRange, convertToMalaysiaTime } from '$lib/utils'
 	import { XCircle, InformationCircle, ExclamationTriangle, ArchiveBox, ArchiveBoxArrowDown, Icon } from 'svelte-hero-icons';
 
 	export let id = '';
