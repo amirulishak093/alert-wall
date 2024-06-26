@@ -11,9 +11,6 @@
 	export let createdAt;
 	export let readMore = false;
 
-	let richText = description;
-
-
 	function getTimestamp(date) {
 		return new Date(date).toLocaleString('en-MY', {
 				year: 'numeric',
@@ -69,7 +66,7 @@
 			{#if !readMore}
 				{trimAndEllipsis(description)}
 			{:else}
-				{@html richText}
+				{description}
 			{/if}
 		</p>
 		
