@@ -1,5 +1,4 @@
 <script>
-import { onMount } from 'svelte';
 	import { selectedId } from '$lib/store'
 	import  { trimAndEllipsis, getDateRange, convertToMalaysiaTime } from '$lib/utils'
 	import { XCircle, InformationCircle, ExclamationTriangle, ArchiveBox, ArchiveBoxArrowDown, Icon } from 'svelte-hero-icons';
@@ -12,13 +11,6 @@ import { onMount } from 'svelte';
 	export let createdAt;
 	export let readMore = false;
 
-	let descriptionEle;
-
-	  onMount(() => {
-    		if (descriptionEle) {
-      	descriptionEle.innerHTML = description;
-    	}
-  	});
 
 	function getTimestamp(date) {
 		return new Date(date).toLocaleString('en-MY', {
@@ -73,7 +65,7 @@ import { onMount } from 'svelte';
 		{#if !readMore}
 			<p class="text-sm pt-1">{trimAndEllipsis(description)}</p>
 		{:else}
-			<p bind:this={descriptionEle} class="text-sm pt-1 whitespace-pre-wrap"></p>
+			<p class="text-sm pt-1 whitespace-pre-wrap">{description}</p>
 		{/if}
 
 		
