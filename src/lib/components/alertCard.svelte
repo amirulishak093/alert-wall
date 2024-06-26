@@ -11,7 +11,7 @@
 	export let createdAt;
 	export let readMore = false;
 
-	let richText = '<p>This is <strong>rich</strong> <em>text</em>.</p>';
+	let richText = description;
 
 
 	function getTimestamp(date) {
@@ -69,13 +69,9 @@
 			{#if !readMore}
 				{trimAndEllipsis(description)}
 			{:else}
-				{description}
+				{@html description}
 			{/if}
 		</p>
-
-		<div>{@html richText}</div>
-
-		
 		
 	</div>
 
