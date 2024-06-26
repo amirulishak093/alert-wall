@@ -67,9 +67,9 @@
 		
 		<p class="text-sm pt-1">
 			{#if !readMore}
-				{@html trimAndEllipsis(description)}
+				{trimAndEllipsis(description)}
 			{:else}
-				{@html description}
+				{@html richText}
 			{/if}
 		</p>
 		
