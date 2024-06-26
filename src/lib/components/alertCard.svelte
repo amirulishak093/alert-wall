@@ -1,4 +1,4 @@
-i want make the {description} here escape html <script>
+<script>
 	import { selectedId } from '$lib/store'
 	import  { trimAndEllipsis, getDateRange, convertToMalaysiaTime } from '$lib/utils'
 	import { XCircle, InformationCircle, ExclamationTriangle, ArchiveBox, ArchiveBoxArrowDown, Icon } from 'svelte-hero-icons';
