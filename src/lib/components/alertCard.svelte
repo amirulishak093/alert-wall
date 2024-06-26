@@ -11,6 +11,8 @@
 	export let createdAt;
 	export let readMore = false;
 
+	let richText = '<p>This is <strong>rich</strong> <em>text</em>.</p>';
+
 
 	function getTimestamp(date) {
 		return new Date(date).toLocaleString('en-MY', {
@@ -62,11 +64,16 @@
 
 		
 		<span class="font-semibold text-sm">{name}</span>
-		{#if !readMore}
-			<p class="text-sm pt-1">{trimAndEllipsis(description)}</p>
-		{:else}
-			<p class="text-sm pt-1 whitespace-pre-wrap">{description}</p>
-		{/if}
+		
+		<p class="text-sm pt-1">
+			{#if !readMore}
+				{trimAndEllipsis(description)}</p>
+			{:else}
+				{description}
+			{/if}
+		</p>
+
+		<p>{richText}</p>
 
 		
 		
