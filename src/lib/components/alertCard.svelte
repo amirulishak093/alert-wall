@@ -73,7 +73,7 @@
 			{/if}
 		</p>
 
-		<p>{richText}</p>
+		<div>{@html richText}</div>
 
 		
 		
