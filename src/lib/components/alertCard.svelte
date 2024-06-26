@@ -67,7 +67,7 @@
 		
 		<p class="text-sm pt-1">
 			{#if !readMore}
-				{trimAndEllipsis(description)}</p>
+				{trimAndEllipsis(description)}
 			{:else}
 				{description}
 			{/if}
